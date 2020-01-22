@@ -1,0 +1,32 @@
+﻿@Model  IEnumerable <mvc_tutorial.Models.Employe>
+  
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>departement</th>
+        </tr>
+        <tbody>
+            @if(Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.EmployeID</td>
+                        <td>@item.Name</td>
+                        <td>@item.Department</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+
+
